@@ -1,0 +1,59 @@
+---
+
+- name: Load variables based on OS type
+  include_vars: "{{ lookup('first_found', params) }}"
+  vars:
+    params:
+      files:
+        - "{{ ansible_distribution }}-{{ ansible_distribution_major_version }}.yml"
+        - "{{ ansible_distribution }}.yml"
+        - "family-{{ ansible_os_family }}-{{ ansible_distribution_major_version }}.yml"
+        - "family-{{ ansible_os_family }}.yml"
+        - default.yml
+      paths:
+        - "vars"
+
+- name: Install packages
+  package:
+    name: "{{ openssh_packages }}"
+    state: present
+
+- name: Create configuration from template
+  template:
+    src: "{{ openssh_template }}"
+    dest: "{{ opensshd_config }}"
+    mode: "0600"
+  notify: Restart openssh 
+  when: openssh_template is defined
+
+- name: Update sshd settings
+  lineinfile:
+    path: "{{ opensshd_config }}"
+    line: "{{ item.key }} {{ item.value }}"
+    regexp: "^(#)?{{ item.key }} .*"
+  loop: "{{ openssh_daemon_options | dict2items }}"
+  notify: Restart openssh 
+
+- name: Start the service
+  service:
+    name: "{{ openssh_service }}"
+    state: started
+    enabled: yes
+
+- name: Configure SELinux
+  seport:
+    ports: '{{ openssh_port }}'
+    proto: tcp
+    setype: "{{ openssh_setype }}"
+    state: present
+  when:
+    - ansible_selinux is defined
+    - ansible_selinux['status'] == 'enabled'
+  notify: Restart openssh
+
+- name: Open firewall ports
+  include_role:
+    name: firewall
+  vars:
+    firewall_ports:
+      - { port: "{{ openssh_port }}", proto: tcp }

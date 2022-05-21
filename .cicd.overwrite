@@ -1,0 +1,13 @@
+---
+
+# Generic
+generic:
+  role: ansible-role-openssh
+  role_short: openssh
+  role_description: |
+    Installs & manages OpenSSH
+
+molecule:
+  converge:
+    vars:
+      openssh_port: 2222

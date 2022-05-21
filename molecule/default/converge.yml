@@ -1,0 +1,10 @@
+---
+
+- name: Converge
+  hosts: all
+  vars:
+    openssh_port: 2222
+  tasks:
+    - name: Include role 'ansible-role-openssh'
+      include_role:
+        name: ansible-role-openssh

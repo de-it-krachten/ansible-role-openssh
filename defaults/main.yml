@@ -1,0 +1,14 @@
+---
+
+# OpenSSH service
+openssh_service: sshd
+
+# Default OpensSH port
+openssh_port: 22
+
+# SELinux type
+openssh_setype: ssh_port_t
+
+# dict of key/values to be configured
+openssh_daemon_options:
+  Port: "{{ openssh_port }}"
