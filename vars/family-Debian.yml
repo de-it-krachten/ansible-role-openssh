@@ -1,8 +1,9 @@
 ---
 
+# list of packages
 openssh_packages:
-  - openssh
   - openssh-server
-  - openssh-clients
+  - openssh-client
 
+# ssh-server config file
 opensshd_config: /etc/ssh/sshd_config
