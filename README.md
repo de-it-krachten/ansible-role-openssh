@@ -15,6 +15,7 @@ Supported platforms
 - Red Hat Enterprise Linux 9<sup>1</sup>
 - CentOS 7
 - RockyLinux 8
+- RockyLinux 9
 - OracleLinux 8
 - AlmaLinux 8
 - AlmaLinux 9
@@ -76,6 +77,7 @@ opensshd_config: /etc/ssh/sshd_config
 <pre><code>
 - name: sample playbook for role 'openssh'
   hosts: all
+  become: "{{ molecule['converge']['become'] | default('yes') }}"
   vars:
     openssh_port: 2222
   tasks:
