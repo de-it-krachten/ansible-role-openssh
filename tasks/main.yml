@@ -23,7 +23,7 @@
     src: "{{ openssh_template }}"
     dest: "{{ opensshd_config }}"
     mode: "0600"
-  notify: Restart openssh 
+  notify: Restart openssh
   when: openssh_template is defined
 
 - name: Update sshd settings
@@ -32,7 +32,7 @@
     line: "{{ item.key }} {{ item.value }}"
     regexp: "^(#)?{{ item.key }} .*"
   loop: "{{ openssh_daemon_options | dict2items }}"
-  notify: Restart openssh 
+  notify: Restart openssh
 
 - name: Start the service
   ansible.builtin.service:
