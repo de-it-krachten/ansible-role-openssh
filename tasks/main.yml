@@ -1,7 +1,7 @@
 ---
 
 - name: Load variables based on OS type
-  include_vars: "{{ lookup('first_found', params) }}"
+  ansible.builtin.include_vars: "{{ lookup('first_found', params) }}"
   vars:
     params:
       files:
@@ -14,12 +14,12 @@
         - "vars"
 
 - name: Install packages
-  package:
+  ansible.builtin.package:
     name: "{{ openssh_packages }}"
     state: present
 
 - name: Create configuration from template
-  template:
+  ansible.builtin.template:
     src: "{{ openssh_template }}"
     dest: "{{ opensshd_config }}"
     mode: "0600"
@@ -27,7 +27,7 @@
   when: openssh_template is defined
 
 - name: Update sshd settings
-  lineinfile:
+  ansible.builtin.lineinfile:
     path: "{{ opensshd_config }}"
     line: "{{ item.key }} {{ item.value }}"
     regexp: "^(#)?{{ item.key }} .*"
@@ -35,13 +35,13 @@
   notify: Restart openssh 
 
 - name: Start the service
-  service:
+  ansible.builtin.service:
     name: "{{ openssh_service }}"
     state: started
     enabled: yes
 
 - name: Configure SELinux
-  seport:
+  community.general.seport:
     ports: '{{ openssh_port }}'
     proto: tcp
     setype: "{{ openssh_setype }}"
@@ -52,7 +52,7 @@
   notify: Restart openssh
 
 - name: Open firewall ports
-  include_role:
+  ansible.builtin.include_role:
     name: firewall
   vars:
     firewall_ports:
