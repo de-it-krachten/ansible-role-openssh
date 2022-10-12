@@ -6,6 +6,16 @@
 Installs & manages OpenSSH
 
 
+
+## Dependencies
+
+#### Roles
+None
+
+#### Collections
+- community.general
+- community.general
+
 ## Platforms
 
 Supported platforms
@@ -47,6 +57,7 @@ openssh_daemon_options:
   Port: "{{ openssh_port }}"
 </pre></code>
 
+
 ### vars/family-RedHat.yml
 <pre><code>
 # list of packages
@@ -82,6 +93,6 @@ opensshd_config: /etc/ssh/sshd_config
     openssh_port: 2222
   tasks:
     - name: Include role 'openssh'
-      include_role:
+      ansible.builtin.include_role:
         name: openssh
 </pre></code>
