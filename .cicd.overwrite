@@ -11,3 +11,6 @@ molecule:
   converge:
     vars:
       openssh_port: 2222
+
+github:
+  ssh_access: true
