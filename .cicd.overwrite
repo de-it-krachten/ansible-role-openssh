@@ -7,7 +7,12 @@ generic:
   role_description: |
     Installs & manages OpenSSH
 
+# Molecule
 molecule:
   converge:
     vars:
       openssh_port: 2222
+
+# # Github
+# github:
+#   ssh_access: true
