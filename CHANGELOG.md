@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/de-it-krachten/ansible-role-openssh/compare/v1.2.0...v1.3.0) (2023-01-29)
+
+
+### Features
+
+* Move to namespaced role names ([e3c527e](https://github.com/de-it-krachten/ansible-role-openssh/commit/e3c527e78770629963a70eaa5e5a4d4d784378b4))
+
 # [1.2.0](https://github.com/de-it-krachten/ansible-role-openssh/compare/v1.1.0...v1.2.0) (2022-10-12)
 
 
