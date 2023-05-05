@@ -12,3 +12,15 @@ openssh_setype: ssh_port_t
 # dict of key/values to be configured
 openssh_daemon_options:
   Port: "{{ openssh_port }}"
+
+# Use predefined host keys
+openssh_host_keys: []
+# openssh_host_keys:
+#   - files/openssh/host1/ssh_host_dsa_key
+#   - files/openssh/host1/ssh_host_dsa_key.pub
+#   - files/openssh/host1/ssh_host_ecdsa_key
+#   - files/openssh/host1/ssh_host_ecdsa_key.pub
+#   - files/openssh/host1/ssh_host_ed25519_key
+#   - files/openssh/host1/ssh_host_ed25519_key.pub
+#   - files/openssh/host1/ssh_host_rsa_key
+#   - files/openssh/host1/ssh_host_rsa_key.pub
