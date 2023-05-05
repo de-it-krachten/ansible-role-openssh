@@ -58,6 +58,17 @@ openssh_daemon_options:
 </pre></code>
 
 
+### vars/family-Debian.yml
+<pre><code>
+# list of packages
+openssh_packages:
+  - openssh-server
+  - openssh-client
+
+# ssh-server config file
+opensshd_config: /etc/ssh/sshd_config
+</pre></code>
+
 ### vars/family-RedHat.yml
 <pre><code>
 # list of packages
@@ -65,17 +76,6 @@ openssh_packages:
   - openssh
   - openssh-server
   - openssh-clients
-
-# ssh-server config file
-opensshd_config: /etc/ssh/sshd_config
-</pre></code>
-
-### vars/family-Debian.yml
-<pre><code>
-# list of packages
-openssh_packages:
-  - openssh-server
-  - openssh-client
 
 # ssh-server config file
 opensshd_config: /etc/ssh/sshd_config
