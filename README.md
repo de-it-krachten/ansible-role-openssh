@@ -29,13 +29,15 @@ Supported platforms
 - OracleLinux 9
 - AlmaLinux 8
 - AlmaLinux 9
-- Debian 10 (Buster)
+- SUSE Linux Enterprise<sup>1</sup>
+- openSUSE Leap 15
+- Debian 10 (Buster)<sup>1</sup>
 - Debian 11 (Bullseye)
-- Ubuntu 18.04 LTS
+- Debian 12 (Bookworm)
 - Ubuntu 20.04 LTS
 - Ubuntu 22.04 LTS
-- Fedora 36
 - Fedora 37
+- Fedora 38
 
 Note:
 <sup>1</sup> : no automated testing is performed on these platforms
@@ -55,6 +57,18 @@ openssh_setype: ssh_port_t
 # dict of key/values to be configured
 openssh_daemon_options:
   Port: "{{ openssh_port }}"
+
+# Use predefined host keys
+openssh_host_keys: []
+# openssh_host_keys:
+#   - files/openssh/host1/ssh_host_dsa_key
+#   - files/openssh/host1/ssh_host_dsa_key.pub
+#   - files/openssh/host1/ssh_host_ecdsa_key
+#   - files/openssh/host1/ssh_host_ecdsa_key.pub
+#   - files/openssh/host1/ssh_host_ed25519_key
+#   - files/openssh/host1/ssh_host_ed25519_key.pub
+#   - files/openssh/host1/ssh_host_rsa_key
+#   - files/openssh/host1/ssh_host_rsa_key.pub
 </pre></code>
 
 
