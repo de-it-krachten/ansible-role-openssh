@@ -1,3 +1,11 @@
+# [1.4.0](https://github.com/de-it-krachten/ansible-role-openssh/compare/v1.3.0...v1.4.0) (2023-08-13)
+
+
+### Features
+
+* Add support for SUSE ([59a1945](https://github.com/de-it-krachten/ansible-role-openssh/commit/59a1945d11b541fe4b7cd625c5e57f6499733fd8))
+* Update supported platform to latest standards ([9eef195](https://github.com/de-it-krachten/ansible-role-openssh/commit/9eef19515ae4c7c974739cdaca928429dcf4e4ac))
+
 # [1.3.0](https://github.com/de-it-krachten/ansible-role-openssh/compare/v1.2.0...v1.3.0) (2023-01-29)
 
 
