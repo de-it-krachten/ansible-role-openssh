@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/de-it-krachten/ansible-role-openssh/compare/v1.4.0...v1.5.0) (2023-08-14)
+
+
+### Features
+
+* Update supported platforms & CI ([cce952e](https://github.com/de-it-krachten/ansible-role-openssh/commit/cce952e67718fd64a34bb9a9dbc6dae93180d512))
+
 # [1.4.0](https://github.com/de-it-krachten/ansible-role-openssh/compare/v1.3.0...v1.4.0) (2023-08-13)
 
 
