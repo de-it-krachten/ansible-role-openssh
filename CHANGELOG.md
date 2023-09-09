@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/de-it-krachten/ansible-role-openssh/compare/v1.5.0...v1.5.1) (2023-09-09)
+
+
+### Bug Fixes
+
+* Move OS specific variables vars->defaults ([1f595cb](https://github.com/de-it-krachten/ansible-role-openssh/commit/1f595cb24187f9cde14cec8561f470468ddbb208))
+
 # [1.5.0](https://github.com/de-it-krachten/ansible-role-openssh/compare/v1.4.0...v1.5.0) (2023-08-14)
 
 
