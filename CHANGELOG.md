@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/de-it-krachten/ansible-role-openssh/compare/v1.5.1...v1.6.0) (2024-04-12)
+
+
+### Features
+
+* Add predefined set of KexAlgorithms ([e21a112](https://github.com/de-it-krachten/ansible-role-openssh/commit/e21a112e34770ec591524cd711186ed353b6157c))
+
 ## [1.5.1](https://github.com/de-it-krachten/ansible-role-openssh/compare/v1.5.0...v1.5.1) (2023-09-09)
 
 
