@@ -13,7 +13,7 @@ Installs & manages OpenSSH
 None
 
 #### Collections
-- {'name': 'community.general'}
+- community.general
 
 ## Platforms
 
