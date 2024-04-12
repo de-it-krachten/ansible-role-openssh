@@ -31,7 +31,6 @@ Supported platforms
 - AlmaLinux 9
 - SUSE Linux Enterprise 15<sup>1</sup>
 - openSUSE Leap 15
-- Debian 10 (Buster)<sup>1</sup>
 - Debian 11 (Bullseye)
 - Debian 12 (Bookworm)
 - Ubuntu 20.04 LTS
@@ -57,6 +56,7 @@ openssh_setype: ssh_port_t
 # dict of key/values to be configured
 openssh_daemon_options:
   Port: "{{ openssh_port }}"
+  KexAlgorithms: ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group14-sha256
 
 # Use predefined host keys
 openssh_host_keys: []
@@ -71,8 +71,31 @@ openssh_host_keys: []
 #   - files/openssh/host1/ssh_host_rsa_key.pub
 </pre></code>
 
+### defaults/family-RedHat.yml
+<pre><code>
+# list of packages
+openssh_packages:
+  - openssh
+  - openssh-server
+  - openssh-clients
 
-### vars/family-Debian.yml
+# ssh-server config file
+opensshd_config: /etc/ssh/sshd_config
+</pre></code>
+
+### defaults/family-Suse.yml
+<pre><code>
+# list of packages
+openssh_packages:
+  - openssh
+  - openssh-server
+  - openssh-clients
+
+# ssh-server config file
+opensshd_config: /etc/ssh/sshd_config
+</pre></code>
+
+### defaults/family-Debian.yml
 <pre><code>
 # list of packages
 openssh_packages:
@@ -83,29 +106,6 @@ openssh_packages:
 opensshd_config: /etc/ssh/sshd_config
 </pre></code>
 
-### vars/family-Suse.yml
-<pre><code>
-# list of packages
-openssh_packages:
-  - openssh
-  - openssh-server
-  - openssh-clients
-
-# ssh-server config file
-opensshd_config: /etc/ssh/sshd_config
-</pre></code>
-
-### vars/family-RedHat.yml
-<pre><code>
-# list of packages
-openssh_packages:
-  - openssh
-  - openssh-server
-  - openssh-clients
-
-# ssh-server config file
-opensshd_config: /etc/ssh/sshd_config
-</pre></code>
 
 
 
@@ -114,7 +114,7 @@ opensshd_config: /etc/ssh/sshd_config
 <pre><code>
 - name: sample playbook for role 'openssh'
   hosts: all
-  become: "yes"
+  become: 'yes'
   vars:
     openssh_port: 2222
   tasks:
