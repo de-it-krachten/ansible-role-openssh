@@ -1,0 +1,4 @@
+---
+
+# OpenSSH service
+openssh_service: ssh

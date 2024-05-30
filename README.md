@@ -35,8 +35,9 @@ Supported platforms
 - Debian 12 (Bookworm)
 - Ubuntu 20.04 LTS
 - Ubuntu 22.04 LTS
-- Fedora 37
-- Fedora 38
+- Ubuntu 24.04 LTS
+- Fedora 39
+- Fedora 40
 
 Note:
 <sup>1</sup> : no automated testing is performed on these platforms
@@ -71,6 +72,17 @@ openssh_host_keys: []
 #   - files/openssh/host1/ssh_host_rsa_key.pub
 </pre></code>
 
+### defaults/family-Debian.yml
+<pre><code>
+# list of packages
+openssh_packages:
+  - openssh-server
+  - openssh-client
+
+# ssh-server config file
+opensshd_config: /etc/ssh/sshd_config
+</pre></code>
+
 ### defaults/family-RedHat.yml
 <pre><code>
 # list of packages
@@ -95,15 +107,10 @@ openssh_packages:
 opensshd_config: /etc/ssh/sshd_config
 </pre></code>
 
-### defaults/family-Debian.yml
+### defaults/Ubuntu-24.yml
 <pre><code>
-# list of packages
-openssh_packages:
-  - openssh-server
-  - openssh-client
-
-# ssh-server config file
-opensshd_config: /etc/ssh/sshd_config
+# OpenSSH service
+openssh_service: ssh
 </pre></code>
 
 
