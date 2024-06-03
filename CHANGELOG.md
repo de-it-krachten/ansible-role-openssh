@@ -1,3 +1,11 @@
+# [1.7.0](https://github.com/de-it-krachten/ansible-role-openssh/compare/v1.6.0...v1.7.0) (2024-06-03)
+
+
+### Features
+
+* Add support for Ubuntu 24.04 LTS ([ddc01c5](https://github.com/de-it-krachten/ansible-role-openssh/commit/ddc01c5d17e20608176e1e8b86a44e49b9c98a6c))
+* Add support for Ubuntu 24.04 LTS + Fedora 40 ([9dc5213](https://github.com/de-it-krachten/ansible-role-openssh/commit/9dc52133d6d4d93a8791953f3f9bad007249b35c))
+
 # [1.6.0](https://github.com/de-it-krachten/ansible-role-openssh/compare/v1.5.1...v1.6.0) (2024-04-12)
 
 
