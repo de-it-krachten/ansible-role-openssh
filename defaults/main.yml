@@ -11,8 +11,10 @@ openssh_setype: ssh_port_t
 
 # dict of key/values to be configured
 openssh_daemon_options:
-  Port: "{{ openssh_port }}"
-  KexAlgorithms: ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group14-sha256
+  - key: Port
+    value: "{{ openssh_port }}"
+  - key: KexAlgorithms
+    value: ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group14-sha256
 
 # Use predefined host keys
 openssh_host_keys: []
