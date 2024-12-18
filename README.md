@@ -19,10 +19,8 @@ None
 
 Supported platforms
 
-- Red Hat Enterprise Linux 7<sup>1</sup>
 - Red Hat Enterprise Linux 8<sup>1</sup>
 - Red Hat Enterprise Linux 9<sup>1</sup>
-- CentOS 7
 - RockyLinux 8
 - RockyLinux 9
 - OracleLinux 8
@@ -56,8 +54,16 @@ openssh_setype: ssh_port_t
 
 # dict of key/values to be configured
 openssh_daemon_options:
-  Port: "{{ openssh_port }}"
-  KexAlgorithms: ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group14-sha256
+  - key: Port
+    value: "{{ openssh_port }}"
+  - key: Ciphers
+    value: 'aes128-ctr,aes192-ctr,aes256-ctr'
+    insertafter: "# Ciphers"
+  - key: KexAlgorithms
+    value: ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group14-sha256
+    insertafter: "# Ciphers"
+  - key: PermitRootLogin
+    value: 'no'
 
 # Use predefined host keys
 openssh_host_keys: []
