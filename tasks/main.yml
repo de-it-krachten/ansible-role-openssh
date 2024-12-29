@@ -16,12 +16,19 @@
   notify: Restart openssh
   when: openssh_template is defined
 
+- name: Convert openssh_daemon_options
+  ansible.builtin.set_fact:
+    openssh_daemon_options: "{{ openssh_daemon_options | dict2items }}"
+  when: openssh_daemon_options | type_debug == 'dict'
+
 - name: Update sshd settings
   ansible.builtin.lineinfile:
     path: "{{ opensshd_config }}"
     line: "{{ item.key }} {{ item.value }}"
+    insertafter: "{{ item.insertafter | default(omit) }}"
+    insertbefore: "{{ item.insertbefore | default(omit) }}"
     regexp: "^(#)?{{ item.key }} .*"
-  loop: "{{ openssh_daemon_options | dict2items }}"
+  loop: "{{ openssh_daemon_options }}"
   notify: Restart openssh
 
 - name: Use specific host keys
