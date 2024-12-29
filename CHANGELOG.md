@@ -1,3 +1,16 @@
+# [1.8.0](https://github.com/de-it-krachten/ansible-role-openssh/compare/v1.7.0...v1.8.0) (2024-12-29)
+
+
+### Bug Fixes
+
+* Update defaults to make them work ([d474dc2](https://github.com/de-it-krachten/ansible-role-openssh/commit/d474dc283481df338bff2f7f18dcbe78fb80da39))
+
+
+### Features
+
+* Make it possible to insert settings at specific locations ([9abbc0f](https://github.com/de-it-krachten/ansible-role-openssh/commit/9abbc0facaece0eb7aa24ea0036183315ae1e5d0))
+* Update supported platforms & CI ([4523b98](https://github.com/de-it-krachten/ansible-role-openssh/commit/4523b98b18b432871a8a87550055c5a9122cd3a7))
+
 # [1.7.0](https://github.com/de-it-krachten/ansible-role-openssh/compare/v1.6.0...v1.7.0) (2024-06-03)
 
 
