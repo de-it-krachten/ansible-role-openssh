@@ -1,3 +1,14 @@
+# [1.9.0](https://github.com/de-it-krachten/ansible-role-openssh/compare/v1.8.0...v1.9.0) (2025-08-07)
+
+
+### Features
+
+* Add support for AlmaLinux 10 ([93d94ad](https://github.com/de-it-krachten/ansible-role-openssh/commit/93d94ad8cd006dec8cc04a0900694e9c8acf20e0))
+* Add support for Debian 13 (Trixie) ([5e9c357](https://github.com/de-it-krachten/ansible-role-openssh/commit/5e9c35762e1bbf2b41e074bfdef102ed47e1e77e))
+* Add support for OracleLinux 10 ([b8d9f71](https://github.com/de-it-krachten/ansible-role-openssh/commit/b8d9f717821cebcdd1e06fc6abcfbbfb0fc72477))
+* Add support for Red Hat Enterprise Linux 10 ([7cc001b](https://github.com/de-it-krachten/ansible-role-openssh/commit/7cc001b533c690965013e050825b018b5f8b59ae))
+* Add support for RockyLinux 10 ([02e2a4c](https://github.com/de-it-krachten/ansible-role-openssh/commit/02e2a4c6208522660c44b7f3476a4c317081c651))
+
 # [1.8.0](https://github.com/de-it-krachten/ansible-role-openssh/compare/v1.7.0...v1.8.0) (2024-12-29)
 
 
