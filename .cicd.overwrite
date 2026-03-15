@@ -7,6 +7,12 @@ generic:
   role_description: |
     Installs & manages OpenSSH
 
+# Supported platforms
+platforms:
+  ubuntu2004:
+    supported: true
+    ci: true
+
 # Molecule
 molecule:
   converge:
