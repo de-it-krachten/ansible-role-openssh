@@ -1,3 +1,13 @@
+# [1.10.0](https://github.com/de-it-krachten/ansible-role-openssh/compare/v1.9.0...v1.10.0) (2026-03-15)
+
+
+### Features
+
+* Added support for Fedora 43 ([ad81ce9](https://github.com/de-it-krachten/ansible-role-openssh/commit/ad81ce97732cd6437162317eb766564bbcddd2dc))
+* Drop support for Fedora 41 ([8744a9f](https://github.com/de-it-krachten/ansible-role-openssh/commit/8744a9ff15771e133b72323f90789d021fc0cb40))
+* Drop support for openSUSE Leap 15 ([707d2a5](https://github.com/de-it-krachten/ansible-role-openssh/commit/707d2a5b6d0afbf1f431edb1a29cf782b64a2b4c))
+* Drop support for SUSE Linux Enterprise 15 ([af30834](https://github.com/de-it-krachten/ansible-role-openssh/commit/af308343ac367e32006ab7b75fa04bcbef8094c2))
+
 # [1.9.0](https://github.com/de-it-krachten/ansible-role-openssh/compare/v1.8.0...v1.9.0) (2025-08-07)
 
 
