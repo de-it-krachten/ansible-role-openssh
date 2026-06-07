@@ -52,8 +52,8 @@
     setype: "{{ openssh_setype }}"
     state: present
   when:
-    - ansible_selinux is defined
-    - ansible_selinux['status'] == 'enabled'
+    - ansible_facts.selinux is defined
+    - ansible_facts.selinux['status'] == 'enabled'
   notify: Restart openssh
 
 - name: Open firewall ports
