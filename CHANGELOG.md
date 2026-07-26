@@ -1,3 +1,18 @@
+# [1.11.0](https://github.com/de-it-krachten/ansible-role-openssh/compare/v1.10.0...v1.11.0) (2026-07-26)
+
+
+### Bug Fixes
+
+* Standarize vars.yml ([db33e32](https://github.com/de-it-krachten/ansible-role-openssh/commit/db33e3237d514dd7137a6d3ccb686e6df14875f1))
+
+
+### Features
+
+* Add support for ansible-core 2.20+ ([b00f0f4](https://github.com/de-it-krachten/ansible-role-openssh/commit/b00f0f441ea4f53c047c9d5ed64fbee1acec8d86))
+* Added support for Fedora 44 ([0ff7b76](https://github.com/de-it-krachten/ansible-role-openssh/commit/0ff7b76225a92c8a4006b10609c3415fd8c575aa))
+* Added support for Ubuntu 26.04 LTS ([eca6609](https://github.com/de-it-krachten/ansible-role-openssh/commit/eca6609ee92fbcb2aa8f00e59b420c1def2f92c0))
+* Drop support for Fedora 42 ([4b15e5c](https://github.com/de-it-krachten/ansible-role-openssh/commit/4b15e5c692aab3be725f045b63b7a311a336fecf))
+
 # [1.10.0](https://github.com/de-it-krachten/ansible-role-openssh/compare/v1.9.0...v1.10.0) (2026-03-15)
 
 
