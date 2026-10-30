@@ -1,3 +1,10 @@
+# [1.12.0](https://github.com/de-it-krachten/ansible-role-openssh/compare/v1.11.0...v1.12.0) (2026-10-30)
+
+
+### Features
+
+* Drop support for Debian 11 (Bullseye) ([2980f49](https://github.com/de-it-krachten/ansible-role-openssh/commit/2980f49744e903725a470f5d02cbd2a591c8c745))
+
 # [1.11.0](https://github.com/de-it-krachten/ansible-role-openssh/compare/v1.10.0...v1.11.0) (2026-07-26)
 
 
